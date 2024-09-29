@@ -1,0 +1,33 @@
+{
+  "name": "foodapi",
+  "version": "1.0.0",
+  "description": "serve swiggy data",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "kalidass boopathi",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-fetch": "^4.0.0",
+    "express": "^4.21.0",
+    "node": "^22.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prabakaran12vm/FoodForce_API.git"
+  },
+  "keywords": [
+    "Food",
+    "Force",
+    "api"
+  ],
+  "bugs": {
+    "url": "https://github.com/Prabakaran12vm/FoodForce_API/issues"
+  },
+  "homepage": "https://github.com/Prabakaran12vm/FoodForce_API#readme"
+}

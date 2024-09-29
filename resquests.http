@@ -1,0 +1,7 @@
+// get all restaurants
+GET http://localhost:5000/api/restaurants
+
+###
+
+// get specific restaurant menu
+GET http://localhost:5000/api/restaurants/564242
