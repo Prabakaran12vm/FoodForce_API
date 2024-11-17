@@ -1,8 +1,9 @@
 import fetch from 'cross-fetch';
 
 export const getRestaurants = async (req, res) => {
-  const url =
-    'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.89960&lng=80.22090&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING';
+  const { lat, lng } = req.query;
+  // console.log({lat, lng});
+  const url = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
 
   try {
     const response = await fetch(url, {
@@ -27,7 +28,7 @@ export const getRestaurants = async (req, res) => {
 };
 
 export const getRestaurantMenu = async (req, res) => {
-  const restaurantId = +(req.params.id);
+  const restaurantId = +req.params.id;
   const url = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.89960&lng=80.22090&restaurantId=${restaurantId}`;
 
   try {
